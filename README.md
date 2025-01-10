@@ -1,15 +1,23 @@
-# Redis-Clone
+# Redis Clone
 
-A Python-based implementation of a simple Redis-like server that supports basic Redis commands and data types.
+A lightweight implementation of a Redis-like server in Python using the `asyncio` library. This project supports basic Redis commands like `PING`, `ECHO`, `SET`, and `GET`, as well as key expiration features.
 
 ---
 
 ## Features
 
-- **ECHO Command**: Responds with the same string that the client sends.
-- **PING Command**: Responds with `PONG` to test connectivity.
-- Basic support for Redis-like RESP (REdis Serialization Protocol).
-- Multi-threaded server handling concurrent client connections.
+- **Commands Supported**:
+  - **PING**: Test connectivity with `PONG`.
+  - **ECHO**: Echo back the provided message.
+  - **SET**: Store a key-value pair in the in-memory store.
+    - Optional expiration using `EX` (seconds) or `PX` (milliseconds).
+  - **GET**: Retrieve the value of a key.
+- **Key Expiry**:
+  - Expiration for keys can be set with `EX` or `PX` during the `SET` operation.
+- **RESP Protocol**:
+  - Implements the Redis Serialization Protocol (RESP) for parsing and sending responses.
+- **Asynchronous**:
+  - Built with `asyncio` for handling multiple connections concurrently.
 
 ---
 
@@ -17,4 +25,19 @@ A Python-based implementation of a simple Redis-like server that supports basic 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/SmitUplenchwar2687/Redis-Clone.git
+   git clone https://github.com/<your-username>/redis-clone.git
+2. Navigate to the project directory:
+   ```bash
+   cd redis-clone
+3. Run the server:
+   ```bash
+   python app/main.py
+
+## Usage
+
+- **Running the server**:
+  - **PING**: Test connectivity with `PONG`.
+  - **ECHO**: Echo back the provided message.
+  - **SET**: Store a key-value pair in the in-memory store.
+    - Optional expiration using `EX` (seconds) or `PX` (milliseconds).
+  - **GET**: Retrieve the value of a key.
