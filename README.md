@@ -1,6 +1,6 @@
 # Redis Clone
 
-A lightweight implementation of a Redis-like server in Python using the `asyncio` library. This project supports basic Redis commands like `PING`, `ECHO`, `SET`, and `GET`, as well as key expiration features.
+A lightweight implementation of a Redis-like in-memory data store in Python. This project supports basic Redis commands like `PING`, `ECHO`, `SET`, and `GET`, as well as key expiration features. It also supports core Redis functionalities like key-value storage, replication, and basic client-server communication.
 
 ---
 
