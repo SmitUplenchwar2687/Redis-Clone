@@ -18,6 +18,12 @@ A lightweight implementation of a Redis-like server in Python using the `asyncio
   - Implements the Redis Serialization Protocol (RESP) for parsing and sending responses.
 - **Asynchronous**:
   - Built with `asyncio` for handling multiple connections concurrently.
+- **Replication**:
+  - Implements master-replica communication using the `REPLCONF` and `PSYNC` protocols.
+- **Persistence**:
+  - Data persistence is supported for reliable storage between sessions.
+- **Concurrency**:
+  - Efficient handling of multiple clients using Go’s goroutines and synchronization primitives.
 
 ---
 
@@ -41,3 +47,5 @@ A lightweight implementation of a Redis-like server in Python using the `asyncio
   - **SET**: Store a key-value pair in the in-memory store.
     - Optional expiration using `EX` (seconds) or `PX` (milliseconds).
   - **GET**: Retrieve the value of a key.
+  - **REPLCONF**: Handle replica configuration.
+  - **PSYNC**: Synchronize data between master and replica.
